@@ -1,0 +1,122 @@
+::selection {
+  color: inherit;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+body {
+  margin: 0;
+  background-image: linear-gradient(to bottom, #6f86d6 100%, #48c6ef 0%);
+}
+h1,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+a {
+  color: #fff;
+}
+a:focus {
+  outline: 0;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.header .short-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .short-profile .profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-image: url("me.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.header .short-profile .profile-photo-hidden {
+  display: none;
+}
+.header .short-profile .profile-name {
+  margin-top: 15px;
+}
+.header .short-profile .profile-work {
+  font-weight: 400;
+}
+.header .short-profile .profile-location {
+  margin-top: 15px;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #fff;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.header .short-profile .profile-location .geo-arrow {
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+  transform: scale(0.8);
+  transition: transform 150ms ease-in-out;
+}
+.header .short-profile .profile-location:hover .geo-arrow {
+  transform: scale(1.2);
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.footer .contact {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.footer .social-media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer .social-media-list .item {
+  margin-bottom: 10px;
+}
+.footer .social-media-list .item:last-child {
+  margin-bottom: 0;
+}
+.footer .social-media-list .item .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #fff;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 20px 40px;
+}
+.footer .social-media-list .item .link .arrow {
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+  transform: rotate(45deg) scale(0.8);
+  transition: transform 150ms ease-in-out;
+}
+.footer .social-media-list .item .link:hover .arrow {
+  transform: rotate(45deg) scale(1.2);
+}
