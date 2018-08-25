@@ -8,6 +8,7 @@ html {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+  background-color: #6f86d6;
 }
 body {
   margin: 0;
@@ -26,17 +27,14 @@ a:focus {
   outline: 0;
 }
 .header {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.header .short-profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.header .short-profile .profile-photo {
+.header .profile-photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -46,37 +44,98 @@ a:focus {
   background-position: center center;
   background-size: cover;
 }
-.header .short-profile .profile-photo-hidden {
+.header .profile-photo-hidden {
   display: none;
 }
-.header .short-profile .profile-name {
+.header .profile-name {
   margin-top: 15px;
+  font-size: 3rem;
 }
-.header .short-profile .profile-work {
-  font-weight: 400;
-}
-.header .short-profile .profile-location {
-  margin-top: 15px;
-  text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #fff;
+.header .profile-work {
   font-weight: 300;
+  font-size: 2rem;
+}
+.header .work-intent {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.header .profile-location {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0;
+  margin-top: 30px;
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
-.header .short-profile .profile-location .geo-arrow {
+.header .profile-location .geo-arrow {
   width: 15px;
   height: 15px;
   margin-left: 15px;
   transform: scale(0.8);
   transition: transform 150ms ease-in-out;
 }
-.header .short-profile .profile-location:hover .geo-arrow {
+.header .profile-location:hover .geo-arrow {
   transform: scale(1.2);
 }
+.service-content,
+.knowledge-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.service-content .skills,
+.knowledge-content .skills {
+  font-size: 3rem;
+  margin-bottom: 60px;
+}
+.service-content .row,
+.knowledge-content .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.service-content .row .col,
+.knowledge-content .row .col {
+  display: flex;
+  width: 100%;
+}
+.service-content .row .col.content-center,
+.knowledge-content .row .col.content-center {
+  justify-content: center;
+}
+.service-content .skills-list,
+.knowledge-content .skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.service-content .skills-list .item,
+.knowledge-content .skills-list .item {
+  margin: 20px;
+}
+.service-content .skills-list .item span,
+.knowledge-content .skills-list .item span {
+  display: block;
+  padding: 20px 80px;
+  background-color: #fff;
+  color: #4c4c4c;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+}
 .footer {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,7 +143,7 @@ a:focus {
   height: 100vh;
 }
 .footer .contact {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 15px;
 }
 .footer .social-media-list {

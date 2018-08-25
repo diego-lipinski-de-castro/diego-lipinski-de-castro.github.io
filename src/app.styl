@@ -8,6 +8,7 @@ html
     font-size 16px
     font-weight 400
     color white
+    background-color #6f86d6
 
 body
     margin 0
@@ -26,58 +27,108 @@ a
         outline 0
 
 .header
+    height 100vh
     display flex
+    flex-direction column
     justify-content center
     align-items center
     height 100vh
 
-    .short-profile
+    .profile-photo
+        width 200px
+        height 200px
+        border-radius 50%
+        border 1px solid #fff
+        background-image url('me.jpg')
+        background-repeat no-repeat
+        background-position center center
+        background-size cover
+
+        &-hidden
+            display none
+
+    .profile-name
+        margin-top 15px
+        font-size 3rem
+
+    .profile-work
+        font-weight 300
+        font-size 2rem
+
+    .work-intent
+        font-weight 700
+        font-size 1.2rem
+
+    .profile-location
+        display flex
+        justify-content space-between
+        align-items center
+        padding 10px 0
+        margin-top 30px
+        border-bottom 1px solid #fff
+        text-decoration none
+        font-size 1.2rem
+        font-weight 400
+
+        .geo-arrow
+            width 15px
+            height 15px
+            margin-left 15px
+            transform scale(0.8)
+            transition transform 150ms ease-in-out
+
+        &:hover
+            .geo-arrow
+                transform scale(1.2)
+
+.service-content, .knowledge-content
+    height 100vh
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    height 100vh
+
+    .skills
+        font-size 3rem
+        margin-bottom 60px
+
+    .row
+        display flex
+        align-items center
+        width 100%
+
+        .col
+            display flex
+            width 100%
+
+            &.content-center
+                justify-content center
+
+    .skills-list
+        list-style none
+        padding 0
+        margin 0
         display flex
         flex-direction column
-        align-items center
 
-        .profile-photo
-            width 200px
-            height 200px
-            border-radius 50%
-            border 1px solid #fff
-            background-image url('me.jpg')
-            background-repeat no-repeat
-            background-position center center
-            background-size cover
+        .item
+            margin 20px
 
-            &-hidden
-                display none
-
-        .profile-name
-            margin-top 15px
-
-        .profile-work
-            font-weight 400
-
-        .profile-location
-            margin-top 15px
-            text-decoration none
-            padding-bottom 2px
-            border-bottom 1px solid #fff
-            font-weight 300
-            display flex
-            justify-content space-between
-            align-items center
-            padding 10px 20px
-
-            .geo-arrow
-                width 15px
-                height 15px
-                margin-left 15px
-                transform scale(0.8)
-                transition transform 150ms ease-in-out
-
-            &:hover
-                .geo-arrow
-                    transform scale(1.2)
+            span
+                display block
+                padding 20px 80px
+                background-color #fff
+                color #4c4c4c
+                text-align center
+                text-transform uppercase
+                font-size 1.5rem
+                font-weight 700
+                font-style italic
+                letter-spacing 1px
 
 .footer
+    height 100vh
     display flex
     flex-direction column
     justify-content center
@@ -85,7 +136,7 @@ a
     height 100vh
 
     .contact
-        font-size 2rem
+        font-size 3rem
         margin-bottom 15px
 
     .social-media-list
