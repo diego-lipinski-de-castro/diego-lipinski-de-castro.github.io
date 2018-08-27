@@ -27,12 +27,11 @@ a
         outline 0
 
 .header
-    height 100vh
+    min-height 100vh
     display flex
     flex-direction column
     justify-content center
     align-items center
-    height 100vh
 
     .profile-photo
         width 200px
@@ -82,21 +81,26 @@ a
                 transform scale(1.2)
 
 .service-content, .knowledge-content
-    height 100vh
+    min-height 100vh
     display flex
     flex-direction column
     justify-content center
     align-items center
-    height 100vh
 
     .skills
         font-size 3rem
         margin-bottom 60px
 
+        @media screen and (max-width 768px)
+            margin-bottom 0
+
     .row
         display flex
         align-items center
         width 100%
+
+        @media screen and (max-width 768px)
+            flex-direction column
 
         .col
             display flex
@@ -112,8 +116,14 @@ a
         display flex
         flex-direction column
 
+        @media screen and (max-width 768px)
+            width 100%
+
         .item
             margin 20px
+
+            @media screen and (max-width 768px)
+                margin 10px
 
             span
                 display block
@@ -127,13 +137,17 @@ a
                 font-style italic
                 letter-spacing 1px
 
+.service-content
+    .row
+        @media screen and (max-width 768px)
+            margin-bottom 60px
+
 .footer
-    height 100vh
+    min-height 100vh
     display flex
     flex-direction column
     justify-content center
     align-items center
-    height 100vh
 
     .contact
         font-size 3rem

@@ -27,12 +27,11 @@ a:focus {
   outline: 0;
 }
 .header {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 .header .profile-photo {
   width: 200px;
@@ -82,23 +81,34 @@ a:focus {
 }
 .service-content,
 .knowledge-content {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 .service-content .skills,
 .knowledge-content .skills {
   font-size: 3rem;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 768px) {
+  .service-content .skills,
+  .knowledge-content .skills {
+    margin-bottom: 0;
+  }
+}
 .service-content .row,
 .knowledge-content .row {
   display: flex;
   align-items: center;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .service-content .row,
+  .knowledge-content .row {
+    flex-direction: column;
+  }
 }
 .service-content .row .col,
 .knowledge-content .row .col {
@@ -117,9 +127,21 @@ a:focus {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+  .service-content .skills-list,
+  .knowledge-content .skills-list {
+    width: 100%;
+  }
+}
 .service-content .skills-list .item,
 .knowledge-content .skills-list .item {
   margin: 20px;
+}
+@media screen and (max-width: 768px) {
+  .service-content .skills-list .item,
+  .knowledge-content .skills-list .item {
+    margin: 10px;
+  }
 }
 .service-content .skills-list .item span,
 .knowledge-content .skills-list .item span {
@@ -134,13 +156,17 @@ a:focus {
   font-style: italic;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 768px) {
+  .service-content .row {
+    margin-bottom: 60px;
+  }
+}
 .footer {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 .footer .contact {
   font-size: 3rem;
