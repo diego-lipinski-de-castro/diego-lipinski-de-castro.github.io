@@ -8,7 +8,6 @@ html {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
-  background-color: #6f86d6;
 }
 body {
   margin: 0;
@@ -79,48 +78,41 @@ a:focus {
 .header .profile-location:hover .geo-arrow {
   transform: scale(1.2);
 }
-.service-content,
-.knowledge-content {
+.service-content {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.service-content .skills,
-.knowledge-content .skills {
+.service-content .skills {
   font-size: 3rem;
   margin-bottom: 60px;
 }
 @media screen and (max-width: 768px) {
-  .service-content .skills,
-  .knowledge-content .skills {
+  .service-content .skills {
     margin-bottom: 0;
   }
 }
-.service-content .row,
-.knowledge-content .row {
+.service-content .row {
   display: flex;
   align-items: center;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .service-content .row,
-  .knowledge-content .row {
+  .service-content .row {
     flex-direction: column;
+    margin-bottom: 60px;
   }
 }
-.service-content .row .col,
-.knowledge-content .row .col {
+.service-content .row .col {
   display: flex;
   width: 100%;
 }
-.service-content .row .col.content-center,
-.knowledge-content .row .col.content-center {
+.service-content .row .col.content-center {
   justify-content: center;
 }
-.service-content .skills-list,
-.knowledge-content .skills-list {
+.service-content .skills-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -128,23 +120,19 @@ a:focus {
   flex-direction: column;
 }
 @media screen and (max-width: 768px) {
-  .service-content .skills-list,
-  .knowledge-content .skills-list {
+  .service-content .skills-list {
     width: 100%;
   }
 }
-.service-content .skills-list .item,
-.knowledge-content .skills-list .item {
+.service-content .skills-list .item {
   margin: 20px;
 }
 @media screen and (max-width: 768px) {
-  .service-content .skills-list .item,
-  .knowledge-content .skills-list .item {
+  .service-content .skills-list .item {
     margin: 10px;
   }
 }
-.service-content .skills-list .item span,
-.knowledge-content .skills-list .item span {
+.service-content .skills-list .item span {
   display: block;
   padding: 20px 40px;
   background-color: #fff;
@@ -157,10 +145,71 @@ a:focus {
   letter-spacing: 1px;
   box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2) inset;
 }
+.knowledge-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.knowledge-content .skills {
+  position: absolute;
+  font-size: 3rem;
+  padding: 50px;
+}
+.knowledge-content .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
-  .service-content .row {
-    margin-bottom: 60px;
+  .knowledge-content .row {
+    flex-direction: column;
   }
+}
+.knowledge-content .row .col {
+  display: flex;
+  width: 100%;
+}
+.knowledge-content .row .col.content-center {
+  justify-content: center;
+}
+.knowledge-content .skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .knowledge-content .skills-list {
+    width: 100%;
+  }
+}
+.knowledge-content .skills-list .item {
+  width: 25%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.knowledge-content .skills-list .item span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+  color: #4c4c4c;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+  outline: 5px solid #fff;
+  border: 5px solid #6f86d6;
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2) inset;
 }
 .footer {
   min-height: 100vh;
